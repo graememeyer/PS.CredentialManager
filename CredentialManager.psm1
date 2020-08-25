@@ -105,7 +105,7 @@ function Get-StoredCredential
             }
             if ([String]::IsNullOrEmpty($StorePath))
             {
-                $p_StorePath = [environment]::GetFolderPath("mydocuments") + "\Credentials"
+                $p_StorePath = $Env:USERPROFILE + "\Credentials"
             }
             else
             {
