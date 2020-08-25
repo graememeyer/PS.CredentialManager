@@ -173,7 +173,7 @@ function Get-StoredCredential
                     }
                 }
                 $p_Credential = Get-Credential -Message $p_Message @p_Args
-                if ($p_Credential -ne $null)
+                if ($null -ne $p_Credential)
                 {
                     $p_Credential.UserName | Out-File $p_UserNamePath -Force
                     $p_Credential.Password | ConvertFrom-SecureString | Out-File $p_PasswordPath -Force
