@@ -14,7 +14,7 @@
 
     Version History:
     1.1 - 2020-09-02 - @GraemeMeyer forks - Graeme Meyer
-        - Minor changes including relocating the credential store to the UserProfile to avoid problems with 
+        - Minor changes including relocating the credential store to the UserProfile to avoid problems with
         corporate OneDrives.
         - Creation of the .psd1 manifest in preparation for upload to the PowerShell Gallery.
         - Code formatting to align with my preferences.
@@ -28,7 +28,7 @@
     and '<Name>.password'. Whitespace or special characters are not allowed.
 .PARAMETER StorePath
     The path to the credential store. Default is '$Env:USERPROFILE\Credentials'. This must be a writeable
-    directory that will be created if it does not exist. 
+    directory that will be created if it does not exist.
 .PARAMETER Credential
     Save the supplied credential in the credential store, overwriting an existing credential.
 .PARAMETER UserName
@@ -168,7 +168,7 @@ function Get-StoredCredential {
             }
         }
         catch {
-            Write-Host -BackgroundColor Black -ForegroundColor Red "Get-StoredCredential: $($_.Exception.Message)"
+            Write-Error "Get-StoredCredential: $($_.Exception.Message)"
         }
     }
 }
