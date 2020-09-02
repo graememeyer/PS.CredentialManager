@@ -4,7 +4,7 @@ A credential manager module for PowerShell. Securely stores and retrieves creden
 
 This module contains the Get-StoredCredentials cmdlet - use this cmdlet to securely store credentials used by your script. The cmdlet has inline documentation. To use use it, start PowerShell and type:
 ``` PowerShell
-Import-Module CredentialManager.psm1
+Import-Module PS.CredentialManager.psm1
 ```
 
 To get help, type:
