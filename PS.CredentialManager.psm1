@@ -13,6 +13,7 @@
     Author: Graeme Meyer
 
     Version History:
+    1.2 - 2022-02-27 - Fixed name regex. Added "-" char at least.
     1.1 - 2020-09-02 - @GraemeMeyer forks - Graeme Meyer
         - Minor changes including relocating the credential store to the UserProfile to avoid problems with
         corporate OneDrives.
@@ -103,7 +104,7 @@ function Get-StoredCredential {
     process {
         $ErrorActionPreference = "Stop"
         try {
-            if ($Name -notmatch "^\w\w*$") {
+            if ($Name -notmatch "^^[\w-]+$") {
                 throw "Name cannot contain whitespace or special characters."
             }
             if ([String]::IsNullOrEmpty($StorePath)) {

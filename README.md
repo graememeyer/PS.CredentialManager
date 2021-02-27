@@ -36,7 +36,9 @@ To get help, including additonal examples, type:
 Get-Help Get-StoredCredential -Detailed
 ```
 
-# Version History
+# Version History:
+1.2 - 2022-02-27 - Fixed name regex. Added "-" char at least.
+
 1.1 - 2020-09-02 - [@GraemeMeyer](https://github.com/GraemeMeyer) forks the project. - Graeme Meyer  
     - Minor changes including relocating the credential store to the UserProfile to avoid problems with  
     corporate OneDrives.  
