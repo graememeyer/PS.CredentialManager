@@ -76,6 +76,8 @@
     Delete the credential JustAName. If the -Delete parameter is used then no PSCredential object will be returned.
 #>
 function Get-StoredCredential {
+    [Alias("Set-StoredCredential")]
+    [Alias("New-StoredCredential")]
     [CmdletBinding()]
     Param
     (
